@@ -4,6 +4,8 @@
  */
 package com.mycompany.bankui;
 
+import java.awt.Color;
+
 /**
  *
  * @author waw
@@ -11,10 +13,11 @@ package com.mycompany.bankui;
 public class SecondRegisterFrm extends javax.swing.JFrame {
 
     /**
-     * Creates new form SecondRegisterFrm
+     * Creates new form FirstRegisterFrm
      */
     public SecondRegisterFrm() {
         initComponents();
+        setLocationRelativeTo(null);
     }
 
     /**
@@ -26,21 +29,283 @@ public class SecondRegisterFrm extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        registerTitle = new javax.swing.JLabel();
+        imgBackground = new javax.swing.JLabel();
+        jPanel1 = new javax.swing.JPanel();
+        registerMsg = new javax.swing.JLabel();
+        addressLine2Txt = new javax.swing.JTextField();
+        addressLine1Txt = new javax.swing.JTextField();
+        phoneNumberTxt = new javax.swing.JTextField();
+        continueBtn = new javax.swing.JButton();
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        registerTitle.setFont(new java.awt.Font("Arial", 3, 36)); // NOI18N
+        registerTitle.setForeground(new java.awt.Color(255, 255, 255));
+        registerTitle.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        registerTitle.setText("Register");
+        getContentPane().add(registerTitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 180, 390, 110));
+
+        imgBackground.setBackground(new java.awt.Color(31, 106, 252));
+        imgBackground.setOpaque(true);
+        getContentPane().add(imgBackground, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 390, 510));
+
+        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+
+        registerMsg.setBackground(new java.awt.Color(31, 106, 252));
+        registerMsg.setFont(new java.awt.Font("Arial", 2, 36)); // NOI18N
+        registerMsg.setForeground(new java.awt.Color(31, 106, 252));
+        registerMsg.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        registerMsg.setText("We're almost there");
+
+        addressLine2Txt.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        addressLine2Txt.setForeground(new java.awt.Color(51, 51, 51));
+        addressLine2Txt.setText("Address Line 2");
+        addressLine2Txt.setToolTipText("James");
+        addressLine2Txt.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                addressLine2TxtFocusGained(evt);
+            }
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                addressLine2TxtFocusLost(evt);
+            }
+        });
+        addressLine2Txt.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                addressLine2TxtMouseClicked(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                addressLine2TxtMouseExited(evt);
+            }
+        });
+        addressLine2Txt.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                addressLine2TxtActionPerformed(evt);
+            }
+        });
+        addressLine2Txt.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                addressLine2TxtKeyTyped(evt);
+            }
+        });
+
+        addressLine1Txt.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        addressLine1Txt.setForeground(new java.awt.Color(51, 51, 51));
+        addressLine1Txt.setText("Address Line 1");
+        addressLine1Txt.setToolTipText("Lebron");
+        addressLine1Txt.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                addressLine1TxtFocusGained(evt);
+            }
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                addressLine1TxtFocusLost(evt);
+            }
+        });
+        addressLine1Txt.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                addressLine1TxtMouseClicked(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                addressLine1TxtMouseExited(evt);
+            }
+        });
+        addressLine1Txt.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                addressLine1TxtActionPerformed(evt);
+            }
+        });
+        addressLine1Txt.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                addressLine1TxtKeyTyped(evt);
+            }
+        });
+
+        phoneNumberTxt.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        phoneNumberTxt.setForeground(new java.awt.Color(51, 51, 51));
+        phoneNumberTxt.setText("Phone number");
+        phoneNumberTxt.setToolTipText("youemail@gmail.com");
+        phoneNumberTxt.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                phoneNumberTxtFocusGained(evt);
+            }
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                phoneNumberTxtFocusLost(evt);
+            }
+        });
+        phoneNumberTxt.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                phoneNumberTxtMouseClicked(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                phoneNumberTxtMouseExited(evt);
+            }
+        });
+        phoneNumberTxt.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                phoneNumberTxtActionPerformed(evt);
+            }
+        });
+        phoneNumberTxt.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                phoneNumberTxtKeyTyped(evt);
+            }
+        });
+
+        continueBtn.setBackground(new java.awt.Color(31, 106, 255));
+        continueBtn.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        continueBtn.setForeground(new java.awt.Color(255, 255, 255));
+        continueBtn.setText("Continue");
+        continueBtn.setBorder(null);
+        continueBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                continueBtnActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(95, 95, 95)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(phoneNumberTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 328, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(addressLine2Txt, javax.swing.GroupLayout.PREFERRED_SIZE, 327, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(registerMsg, javax.swing.GroupLayout.PREFERRED_SIZE, 326, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(addressLine1Txt, javax.swing.GroupLayout.PREFERRED_SIZE, 326, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(182, 182, 182)
+                        .addComponent(continueBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 153, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(117, Short.MAX_VALUE))
         );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(64, 64, 64)
+                .addComponent(registerMsg, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(35, 35, 35)
+                .addComponent(addressLine1Txt, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(45, 45, 45)
+                .addComponent(addressLine2Txt, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(48, 48, 48)
+                .addComponent(phoneNumberTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(44, 44, 44)
+                .addComponent(continueBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(63, Short.MAX_VALUE))
         );
+
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 0, 540, 510));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void addressLine2TxtFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_addressLine2TxtFocusGained
+        if (this.addressLine2Txt.getText().contentEquals("Address Line 2")) {
+            addressLine2Txt.setText("");
+        }
+
+    }//GEN-LAST:event_addressLine2TxtFocusGained
+
+    private void addressLine2TxtFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_addressLine2TxtFocusLost
+        // TODO add your handling code here:
+
+        if (this.addressLine2Txt.getText().contentEquals("")) {
+            addressLine2Txt.setText("Address Line 2");
+        }
+
+    }//GEN-LAST:event_addressLine2TxtFocusLost
+
+    private void addressLine2TxtMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_addressLine2TxtMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_addressLine2TxtMouseClicked
+
+    private void addressLine2TxtMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_addressLine2TxtMouseExited
+        // TODO add your handling code here:
+
+    }//GEN-LAST:event_addressLine2TxtMouseExited
+
+    private void addressLine2TxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addressLine2TxtActionPerformed
+        // TODO add your handling code here:
+
+    }//GEN-LAST:event_addressLine2TxtActionPerformed
+
+    private void addressLine2TxtKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_addressLine2TxtKeyTyped
+        // TODO add your handling code here:
+    }//GEN-LAST:event_addressLine2TxtKeyTyped
+
+    private void addressLine1TxtFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_addressLine1TxtFocusGained
+        // TODO add your handling code here:
+        if (this.addressLine1Txt.getText().contentEquals("Address Line 1")) {
+            addressLine1Txt.setText("");
+        }
+
+
+    }//GEN-LAST:event_addressLine1TxtFocusGained
+
+    private void addressLine1TxtFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_addressLine1TxtFocusLost
+        // TODO add your handling code here:
+        if (this.addressLine1Txt.getText().contentEquals("")) {
+            addressLine1Txt.setText("Address Line 1");
+        }
+    }//GEN-LAST:event_addressLine1TxtFocusLost
+
+    private void addressLine1TxtMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_addressLine1TxtMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_addressLine1TxtMouseClicked
+
+    private void addressLine1TxtMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_addressLine1TxtMouseExited
+        // TODO add your handling code here:
+    }//GEN-LAST:event_addressLine1TxtMouseExited
+
+    private void addressLine1TxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addressLine1TxtActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_addressLine1TxtActionPerformed
+
+    private void addressLine1TxtKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_addressLine1TxtKeyTyped
+        // TODO add your handling code here:
+    }//GEN-LAST:event_addressLine1TxtKeyTyped
+
+    private void continueBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_continueBtnActionPerformed
+        // TODO add your handling code here:
+        new ThirdRegisterFrm().setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_continueBtnActionPerformed
+
+    private void phoneNumberTxtKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_phoneNumberTxtKeyTyped
+        // TODO add your handling code here:
+    }//GEN-LAST:event_phoneNumberTxtKeyTyped
+
+    private void phoneNumberTxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_phoneNumberTxtActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_phoneNumberTxtActionPerformed
+
+    private void phoneNumberTxtMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_phoneNumberTxtMouseExited
+        // TODO add your handling code here:
+    }//GEN-LAST:event_phoneNumberTxtMouseExited
+
+    private void phoneNumberTxtMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_phoneNumberTxtMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_phoneNumberTxtMouseClicked
+
+    private void phoneNumberTxtFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_phoneNumberTxtFocusLost
+        // TODO add your handling code here:
+        if (this.phoneNumberTxt.getText().contentEquals("")) {
+            phoneNumberTxt.setText("Phone number");
+        }
+    }//GEN-LAST:event_phoneNumberTxtFocusLost
+
+    private void phoneNumberTxtFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_phoneNumberTxtFocusGained
+        // TODO add your handling code here:
+
+        if (this.phoneNumberTxt.getText().contentEquals("Phone number")) {
+            phoneNumberTxt.setText("");
+        }
+
+    }//GEN-LAST:event_phoneNumberTxtFocusGained
 
     /**
      * @param args the command line arguments
@@ -68,6 +333,7 @@ public class SecondRegisterFrm extends javax.swing.JFrame {
             java.util.logging.Logger.getLogger(SecondRegisterFrm.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
+        //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
@@ -78,5 +344,13 @@ public class SecondRegisterFrm extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTextField addressLine1Txt;
+    private javax.swing.JTextField addressLine2Txt;
+    private javax.swing.JButton continueBtn;
+    private javax.swing.JLabel imgBackground;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JTextField phoneNumberTxt;
+    private javax.swing.JLabel registerMsg;
+    private javax.swing.JLabel registerTitle;
     // End of variables declaration//GEN-END:variables
 }

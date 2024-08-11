@@ -102,6 +102,11 @@ public class MainFrm extends javax.swing.JFrame {
         btnRegister.setText("Create Account");
         btnRegister.setToolTipText("");
         btnRegister.setBorder(null);
+        btnRegister.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnRegisterActionPerformed(evt);
+            }
+        });
 
         bankSlogan1.setBackground(new java.awt.Color(31, 106, 252));
         bankSlogan1.setFont(new java.awt.Font("Arial", 2, 36)); // NOI18N
@@ -149,6 +154,12 @@ public class MainFrm extends javax.swing.JFrame {
         new LoginFrm().setVisible(true);
         this.dispose();
     }//GEN-LAST:event_btnLoginActionPerformed
+
+    private void btnRegisterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegisterActionPerformed
+        // TODO add your handling code here:
+        new FirstRegisterFrm().setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_btnRegisterActionPerformed
 
     /**
      * @param args the command line arguments

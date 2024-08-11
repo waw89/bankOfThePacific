@@ -4,6 +4,8 @@
  */
 package com.mycompany.bankui;
 
+import java.awt.Color;
+
 /**
  *
  * @author waw
@@ -15,6 +17,7 @@ public class FirstRegisterFrm extends javax.swing.JFrame {
      */
     public FirstRegisterFrm() {
         initComponents();
+        setLocationRelativeTo(null);
     }
 
     /**
@@ -26,21 +29,299 @@ public class FirstRegisterFrm extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        registerTitle = new javax.swing.JLabel();
+        imgBackground = new javax.swing.JLabel();
+        jPanel1 = new javax.swing.JPanel();
+        registerMsg = new javax.swing.JLabel();
+        lastNameTxt = new javax.swing.JTextField();
+        fisrtNameTxt = new javax.swing.JTextField();
+        curpTxt = new javax.swing.JTextField();
+        countryCb = new javax.swing.JComboBox<>();
+        continueBtn = new javax.swing.JButton();
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        registerTitle.setFont(new java.awt.Font("Arial", 3, 36)); // NOI18N
+        registerTitle.setForeground(new java.awt.Color(255, 255, 255));
+        registerTitle.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        registerTitle.setText("Register");
+        getContentPane().add(registerTitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 180, 390, 110));
+
+        imgBackground.setBackground(new java.awt.Color(31, 106, 252));
+        imgBackground.setOpaque(true);
+        getContentPane().add(imgBackground, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 390, 510));
+
+        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+
+        registerMsg.setBackground(new java.awt.Color(31, 106, 252));
+        registerMsg.setFont(new java.awt.Font("Arial", 2, 36)); // NOI18N
+        registerMsg.setForeground(new java.awt.Color(31, 106, 252));
+        registerMsg.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        registerMsg.setText("Let's get you started");
+
+        lastNameTxt.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        lastNameTxt.setForeground(new java.awt.Color(51, 51, 51));
+        lastNameTxt.setText("Last name");
+        lastNameTxt.setToolTipText("James");
+        lastNameTxt.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                lastNameTxtFocusGained(evt);
+            }
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                lastNameTxtFocusLost(evt);
+            }
+        });
+        lastNameTxt.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lastNameTxtMouseClicked(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                lastNameTxtMouseExited(evt);
+            }
+        });
+        lastNameTxt.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                lastNameTxtActionPerformed(evt);
+            }
+        });
+        lastNameTxt.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                lastNameTxtKeyTyped(evt);
+            }
+        });
+
+        fisrtNameTxt.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        fisrtNameTxt.setForeground(new java.awt.Color(51, 51, 51));
+        fisrtNameTxt.setText("First name");
+        fisrtNameTxt.setToolTipText("Lebron");
+        fisrtNameTxt.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                fisrtNameTxtFocusGained(evt);
+            }
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                fisrtNameTxtFocusLost(evt);
+            }
+        });
+        fisrtNameTxt.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                fisrtNameTxtMouseClicked(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                fisrtNameTxtMouseExited(evt);
+            }
+        });
+        fisrtNameTxt.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                fisrtNameTxtActionPerformed(evt);
+            }
+        });
+        fisrtNameTxt.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                fisrtNameTxtKeyTyped(evt);
+            }
+        });
+
+        curpTxt.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        curpTxt.setForeground(new java.awt.Color(51, 51, 51));
+        curpTxt.setText("CURP/ID");
+        curpTxt.setToolTipText("youemail@gmail.com");
+        curpTxt.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                curpTxtFocusGained(evt);
+            }
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                curpTxtFocusLost(evt);
+            }
+        });
+        curpTxt.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                curpTxtMouseClicked(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                curpTxtMouseExited(evt);
+            }
+        });
+        curpTxt.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                curpTxtActionPerformed(evt);
+            }
+        });
+        curpTxt.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                curpTxtKeyTyped(evt);
+            }
+        });
+
+        countryCb.setBackground(new java.awt.Color(204, 204, 255));
+        countryCb.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        countryCb.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Select your country", "Mexico", "USA" }));
+
+        continueBtn.setBackground(new java.awt.Color(31, 106, 255));
+        continueBtn.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        continueBtn.setForeground(new java.awt.Color(255, 255, 255));
+        continueBtn.setText("Continue");
+        continueBtn.setBorder(null);
+        continueBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                continueBtnActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(38, 38, 38)
+                .addComponent(registerMsg, javax.swing.GroupLayout.DEFAULT_SIZE, 460, Short.MAX_VALUE)
+                .addGap(42, 42, 42))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addComponent(countryCb, javax.swing.GroupLayout.PREFERRED_SIZE, 327, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(jPanel1Layout.createSequentialGroup()
+                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addComponent(fisrtNameTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 326, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(lastNameTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 327, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGap(2, 2, 2)))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(2, 2, 2)
+                        .addComponent(curpTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 328, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(186, 186, 186)
+                .addComponent(continueBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 153, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(63, 63, 63)
+                .addComponent(registerMsg, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(46, 46, 46)
+                .addComponent(fisrtNameTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(26, 26, 26)
+                .addComponent(lastNameTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(32, 32, 32)
+                .addComponent(countryCb, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(32, 32, 32)
+                .addComponent(curpTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(continueBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(51, Short.MAX_VALUE))
         );
+
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 0, 540, 510));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void lastNameTxtFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_lastNameTxtFocusGained
+
+        if (this.lastNameTxt.getText().contentEquals("Last name")) {
+            lastNameTxt.setText("");
+
+        }
+    }//GEN-LAST:event_lastNameTxtFocusGained
+
+    private void lastNameTxtFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_lastNameTxtFocusLost
+        // TODO add your handling code here:
+        if (this.lastNameTxt.getText().contentEquals("")) {
+            lastNameTxt.setText("Last name");
+        }
+    }//GEN-LAST:event_lastNameTxtFocusLost
+
+    private void lastNameTxtMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lastNameTxtMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_lastNameTxtMouseClicked
+
+    private void lastNameTxtMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lastNameTxtMouseExited
+        // TODO add your handling code here:
+
+    }//GEN-LAST:event_lastNameTxtMouseExited
+
+    private void lastNameTxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_lastNameTxtActionPerformed
+        // TODO add your handling code here:
+
+    }//GEN-LAST:event_lastNameTxtActionPerformed
+
+    private void lastNameTxtKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_lastNameTxtKeyTyped
+        // TODO add your handling code here:
+    }//GEN-LAST:event_lastNameTxtKeyTyped
+
+    private void fisrtNameTxtFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_fisrtNameTxtFocusGained
+        // TODO add your handling code here:
+        if (this.fisrtNameTxt.getText().contentEquals("First name")) {
+            fisrtNameTxt.setText("");
+
+        }
+    }//GEN-LAST:event_fisrtNameTxtFocusGained
+
+    private void fisrtNameTxtFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_fisrtNameTxtFocusLost
+        // TODO add your handling code here:
+
+        if (this.fisrtNameTxt.getText().contentEquals("")) {
+            fisrtNameTxt.setText("First name");
+        }
+
+    }//GEN-LAST:event_fisrtNameTxtFocusLost
+
+    private void fisrtNameTxtMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_fisrtNameTxtMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_fisrtNameTxtMouseClicked
+
+    private void fisrtNameTxtMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_fisrtNameTxtMouseExited
+        // TODO add your handling code here:
+    }//GEN-LAST:event_fisrtNameTxtMouseExited
+
+    private void fisrtNameTxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fisrtNameTxtActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_fisrtNameTxtActionPerformed
+
+    private void fisrtNameTxtKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_fisrtNameTxtKeyTyped
+        // TODO add your handling code here:
+    }//GEN-LAST:event_fisrtNameTxtKeyTyped
+
+    private void curpTxtFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_curpTxtFocusGained
+        // TODO add your handling code here:
+        if (this.curpTxt.getText().contentEquals("CURP/ID")) {
+            curpTxt.setText("");
+
+        }
+    }//GEN-LAST:event_curpTxtFocusGained
+
+    private void curpTxtFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_curpTxtFocusLost
+        // TODO add your handling code here:
+        if (this.curpTxt.getText().contentEquals("")) {
+            curpTxt.setText("CURP/ID");
+        }
+    }//GEN-LAST:event_curpTxtFocusLost
+
+    private void curpTxtMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_curpTxtMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_curpTxtMouseClicked
+
+    private void curpTxtMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_curpTxtMouseExited
+        // TODO add your handling code here:
+    }//GEN-LAST:event_curpTxtMouseExited
+
+    private void curpTxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_curpTxtActionPerformed
+        // TODO add your handling code here:
+
+
+    }//GEN-LAST:event_curpTxtActionPerformed
+
+    private void curpTxtKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_curpTxtKeyTyped
+        // TODO add your handling code here:
+    }//GEN-LAST:event_curpTxtKeyTyped
+
+    private void continueBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_continueBtnActionPerformed
+        // TODO add your handling code here:
+        new SecondRegisterFrm().setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_continueBtnActionPerformed
 
     /**
      * @param args the command line arguments
@@ -78,5 +359,14 @@ public class FirstRegisterFrm extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton continueBtn;
+    private javax.swing.JComboBox<String> countryCb;
+    private javax.swing.JTextField curpTxt;
+    private javax.swing.JTextField fisrtNameTxt;
+    private javax.swing.JLabel imgBackground;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JTextField lastNameTxt;
+    private javax.swing.JLabel registerMsg;
+    private javax.swing.JLabel registerTitle;
     // End of variables declaration//GEN-END:variables
 }

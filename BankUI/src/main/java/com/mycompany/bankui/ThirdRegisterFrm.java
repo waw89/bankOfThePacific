@@ -11,10 +11,11 @@ package com.mycompany.bankui;
 public class ThirdRegisterFrm extends javax.swing.JFrame {
 
     /**
-     * Creates new form ThirdRegisterFrm
+     * Creates new form FirstRegisterFrm
      */
     public ThirdRegisterFrm() {
         initComponents();
+        setLocationRelativeTo(null);
     }
 
     /**
@@ -26,21 +27,275 @@ public class ThirdRegisterFrm extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        registerTitle = new javax.swing.JLabel();
+        imgBackground = new javax.swing.JLabel();
+        jPanel1 = new javax.swing.JPanel();
+        registerMsg = new javax.swing.JLabel();
+        passwordTxt = new javax.swing.JTextField();
+        emailTxt = new javax.swing.JTextField();
+        passwordConfirmTxt = new javax.swing.JTextField();
+        continueBtn = new javax.swing.JButton();
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        registerTitle.setFont(new java.awt.Font("Arial", 3, 36)); // NOI18N
+        registerTitle.setForeground(new java.awt.Color(255, 255, 255));
+        registerTitle.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        registerTitle.setText("Register");
+        getContentPane().add(registerTitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 180, 390, 110));
+
+        imgBackground.setBackground(new java.awt.Color(31, 106, 252));
+        imgBackground.setOpaque(true);
+        getContentPane().add(imgBackground, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 390, 510));
+
+        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+
+        registerMsg.setBackground(new java.awt.Color(31, 106, 252));
+        registerMsg.setFont(new java.awt.Font("Arial", 2, 36)); // NOI18N
+        registerMsg.setForeground(new java.awt.Color(31, 106, 252));
+        registerMsg.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        registerMsg.setText("Just one last thing");
+
+        passwordTxt.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        passwordTxt.setForeground(new java.awt.Color(51, 51, 51));
+        passwordTxt.setText("Password");
+        passwordTxt.setToolTipText("James");
+        passwordTxt.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                passwordTxtFocusGained(evt);
+            }
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                passwordTxtFocusLost(evt);
+            }
+        });
+        passwordTxt.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                passwordTxtMouseClicked(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                passwordTxtMouseExited(evt);
+            }
+        });
+        passwordTxt.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                passwordTxtActionPerformed(evt);
+            }
+        });
+        passwordTxt.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                passwordTxtKeyTyped(evt);
+            }
+        });
+
+        emailTxt.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        emailTxt.setForeground(new java.awt.Color(51, 51, 51));
+        emailTxt.setText("Email");
+        emailTxt.setToolTipText("Lebron");
+        emailTxt.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                emailTxtFocusGained(evt);
+            }
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                emailTxtFocusLost(evt);
+            }
+        });
+        emailTxt.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                emailTxtMouseClicked(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                emailTxtMouseExited(evt);
+            }
+        });
+        emailTxt.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                emailTxtActionPerformed(evt);
+            }
+        });
+        emailTxt.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                emailTxtKeyTyped(evt);
+            }
+        });
+
+        passwordConfirmTxt.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        passwordConfirmTxt.setForeground(new java.awt.Color(51, 51, 51));
+        passwordConfirmTxt.setText("Confirm your password");
+        passwordConfirmTxt.setToolTipText("youemail@gmail.com");
+        passwordConfirmTxt.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                passwordConfirmTxtFocusGained(evt);
+            }
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                passwordConfirmTxtFocusLost(evt);
+            }
+        });
+        passwordConfirmTxt.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                passwordConfirmTxtMouseClicked(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                passwordConfirmTxtMouseExited(evt);
+            }
+        });
+        passwordConfirmTxt.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                passwordConfirmTxtActionPerformed(evt);
+            }
+        });
+        passwordConfirmTxt.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                passwordConfirmTxtKeyTyped(evt);
+            }
+        });
+
+        continueBtn.setBackground(new java.awt.Color(31, 106, 255));
+        continueBtn.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        continueBtn.setForeground(new java.awt.Color(255, 255, 255));
+        continueBtn.setText("Register");
+        continueBtn.setBorder(null);
+        continueBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                continueBtnActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(95, 95, 95)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(passwordConfirmTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 328, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(passwordTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 327, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(registerMsg, javax.swing.GroupLayout.PREFERRED_SIZE, 326, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(emailTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 326, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(182, 182, 182)
+                        .addComponent(continueBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 153, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(117, Short.MAX_VALUE))
         );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(64, 64, 64)
+                .addComponent(registerMsg, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(35, 35, 35)
+                .addComponent(emailTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(45, 45, 45)
+                .addComponent(passwordTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(48, 48, 48)
+                .addComponent(passwordConfirmTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(44, 44, 44)
+                .addComponent(continueBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(63, Short.MAX_VALUE))
         );
+
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 0, 540, 510));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void passwordTxtFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_passwordTxtFocusGained
+        if (this.passwordTxt.getText().contentEquals("Password")) {
+            passwordTxt.setText("");
+        }
+
+    }//GEN-LAST:event_passwordTxtFocusGained
+
+    private void passwordTxtFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_passwordTxtFocusLost
+        // TODO add your handling code here:
+        if (this.passwordTxt.getText().contentEquals("")) {
+            passwordTxt.setText("Password");
+        }
+    }//GEN-LAST:event_passwordTxtFocusLost
+
+    private void passwordTxtMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_passwordTxtMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_passwordTxtMouseClicked
+
+    private void passwordTxtMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_passwordTxtMouseExited
+        // TODO add your handling code here:
+
+    }//GEN-LAST:event_passwordTxtMouseExited
+
+    private void passwordTxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_passwordTxtActionPerformed
+        // TODO add your handling code here:
+
+    }//GEN-LAST:event_passwordTxtActionPerformed
+
+    private void passwordTxtKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_passwordTxtKeyTyped
+        // TODO add your handling code here:
+    }//GEN-LAST:event_passwordTxtKeyTyped
+
+    private void emailTxtFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_emailTxtFocusGained
+        // TODO add your handling code here:
+        if (this.emailTxt.getText().contentEquals("Email")) {
+            emailTxt.setText("");
+        }
+    }//GEN-LAST:event_emailTxtFocusGained
+
+    private void emailTxtFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_emailTxtFocusLost
+        // TODO add your handling code here:
+        if (this.emailTxt.getText().contentEquals("")) {
+            emailTxt.setText("Email");
+        }
+    }//GEN-LAST:event_emailTxtFocusLost
+
+    private void emailTxtMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_emailTxtMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_emailTxtMouseClicked
+
+    private void emailTxtMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_emailTxtMouseExited
+        // TODO add your handling code here:
+    }//GEN-LAST:event_emailTxtMouseExited
+
+    private void emailTxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_emailTxtActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_emailTxtActionPerformed
+
+    private void emailTxtKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_emailTxtKeyTyped
+        // TODO add your handling code here:
+    }//GEN-LAST:event_emailTxtKeyTyped
+
+    private void continueBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_continueBtnActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_continueBtnActionPerformed
+
+    private void passwordConfirmTxtKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_passwordConfirmTxtKeyTyped
+        // TODO add your handling code here:
+    }//GEN-LAST:event_passwordConfirmTxtKeyTyped
+
+    private void passwordConfirmTxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_passwordConfirmTxtActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_passwordConfirmTxtActionPerformed
+
+    private void passwordConfirmTxtMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_passwordConfirmTxtMouseExited
+        // TODO add your handling code here:
+    }//GEN-LAST:event_passwordConfirmTxtMouseExited
+
+    private void passwordConfirmTxtMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_passwordConfirmTxtMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_passwordConfirmTxtMouseClicked
+
+    private void passwordConfirmTxtFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_passwordConfirmTxtFocusLost
+        // TODO add your handling code here:
+        if (this.passwordConfirmTxt.getText().contentEquals("")) {
+            passwordConfirmTxt.setText("Confirm your password");
+        }
+    }//GEN-LAST:event_passwordConfirmTxtFocusLost
+
+    private void passwordConfirmTxtFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_passwordConfirmTxtFocusGained
+        // TODO add your handling code here:
+        if (this.passwordConfirmTxt.getText().contentEquals("Confirm your password")) {
+            passwordConfirmTxt.setText("");
+        }
+    }//GEN-LAST:event_passwordConfirmTxtFocusGained
 
     /**
      * @param args the command line arguments
@@ -68,6 +323,9 @@ public class ThirdRegisterFrm extends javax.swing.JFrame {
             java.util.logging.Logger.getLogger(ThirdRegisterFrm.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
@@ -78,5 +336,13 @@ public class ThirdRegisterFrm extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton continueBtn;
+    private javax.swing.JTextField emailTxt;
+    private javax.swing.JLabel imgBackground;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JTextField passwordConfirmTxt;
+    private javax.swing.JTextField passwordTxt;
+    private javax.swing.JLabel registerMsg;
+    private javax.swing.JLabel registerTitle;
     // End of variables declaration//GEN-END:variables
 }
