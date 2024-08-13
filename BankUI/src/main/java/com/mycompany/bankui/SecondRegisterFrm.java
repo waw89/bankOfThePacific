@@ -4,7 +4,9 @@
  */
 package com.mycompany.bankui;
 
-import java.awt.Color;
+import dtos.RegisterNewUserDTO;
+import java.util.ArrayList;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -15,9 +17,49 @@ public class SecondRegisterFrm extends javax.swing.JFrame {
     /**
      * Creates new form FirstRegisterFrm
      */
+    private RegisterNewUserDTO registerDTO;
+
     public SecondRegisterFrm() {
         initComponents();
         setLocationRelativeTo(null);
+
+    }
+
+    public SecondRegisterFrm(RegisterNewUserDTO registerUserDTO) {
+        initComponents();
+        setLocationRelativeTo(null);
+
+        this.registerDTO = registerUserDTO;
+
+    }
+
+    private RegisterNewUserDTO assignValues(String addressLine1, String addressLine2, String phoneNumber) throws Exception {
+
+
+        if (validateFields()) {
+
+            registerDTO.setAddressLine1(addressLine1);
+            registerDTO.setAddressLine2(addressLine2);
+            registerDTO.setPhoneNumber(phoneNumber);
+
+            return registerDTO;
+        } else {
+            JOptionPane.showMessageDialog(null, "There is an error in a field, please retry");
+            return null;
+        }
+
+    }
+
+    private boolean validateFields() throws Exception {
+
+        if (this.addressLine1Txt.getText().equalsIgnoreCase("Address Line 1")
+                | this.addressLine2Txt.getText().equalsIgnoreCase("Address Line 2")
+                | this.phoneNumberTxt.getText().toString().equalsIgnoreCase("Phone number")) {
+
+            throw new Exception("There was an error while veryfing the field values");
+        }
+
+        return true;
     }
 
     /**
@@ -271,8 +313,16 @@ public class SecondRegisterFrm extends javax.swing.JFrame {
 
     private void continueBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_continueBtnActionPerformed
         // TODO add your handling code here:
-        new ThirdRegisterFrm().setVisible(true);
-        this.dispose();
+
+        try {
+            assignValues(this.addressLine1Txt.getText().toString(), this.addressLine2Txt.getText().toString(), this.phoneNumberTxt.getText().toString());
+            new ThirdRegisterFrm(this.registerDTO).setVisible(true);
+            this.dispose();
+        } catch (Exception e) {
+            System.out.println("An exception ocurred, please retry");
+            JOptionPane.showMessageDialog(null, "Please check your input and retry");
+        }
+
     }//GEN-LAST:event_continueBtnActionPerformed
 
     private void phoneNumberTxtKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_phoneNumberTxtKeyTyped

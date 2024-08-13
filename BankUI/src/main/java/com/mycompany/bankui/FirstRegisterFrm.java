@@ -4,7 +4,9 @@
  */
 package com.mycompany.bankui;
 
-import java.awt.Color;
+import dtos.RegisterNewUserDTO;
+import java.util.ArrayList;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -35,7 +37,7 @@ public class FirstRegisterFrm extends javax.swing.JFrame {
         registerMsg = new javax.swing.JLabel();
         lastNameTxt = new javax.swing.JTextField();
         fisrtNameTxt = new javax.swing.JTextField();
-        curpTxt = new javax.swing.JTextField();
+        countryIdentifierTxt = new javax.swing.JTextField();
         countryCb = new javax.swing.JComboBox<>();
         continueBtn = new javax.swing.JButton();
 
@@ -122,34 +124,34 @@ public class FirstRegisterFrm extends javax.swing.JFrame {
             }
         });
 
-        curpTxt.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        curpTxt.setForeground(new java.awt.Color(51, 51, 51));
-        curpTxt.setText("CURP/ID");
-        curpTxt.setToolTipText("youemail@gmail.com");
-        curpTxt.addFocusListener(new java.awt.event.FocusAdapter() {
+        countryIdentifierTxt.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        countryIdentifierTxt.setForeground(new java.awt.Color(51, 51, 51));
+        countryIdentifierTxt.setText("CURP/ID");
+        countryIdentifierTxt.setToolTipText("youemail@gmail.com");
+        countryIdentifierTxt.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusGained(java.awt.event.FocusEvent evt) {
-                curpTxtFocusGained(evt);
+                countryIdentifierTxtFocusGained(evt);
             }
             public void focusLost(java.awt.event.FocusEvent evt) {
-                curpTxtFocusLost(evt);
+                countryIdentifierTxtFocusLost(evt);
             }
         });
-        curpTxt.addMouseListener(new java.awt.event.MouseAdapter() {
+        countryIdentifierTxt.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                curpTxtMouseClicked(evt);
+                countryIdentifierTxtMouseClicked(evt);
             }
             public void mouseExited(java.awt.event.MouseEvent evt) {
-                curpTxtMouseExited(evt);
+                countryIdentifierTxtMouseExited(evt);
             }
         });
-        curpTxt.addActionListener(new java.awt.event.ActionListener() {
+        countryIdentifierTxt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                curpTxtActionPerformed(evt);
+                countryIdentifierTxtActionPerformed(evt);
             }
         });
-        curpTxt.addKeyListener(new java.awt.event.KeyAdapter() {
+        countryIdentifierTxt.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
-                curpTxtKeyTyped(evt);
+                countryIdentifierTxtKeyTyped(evt);
             }
         });
 
@@ -188,7 +190,7 @@ public class FirstRegisterFrm extends javax.swing.JFrame {
                             .addGap(2, 2, 2)))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(2, 2, 2)
-                        .addComponent(curpTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 328, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(countryIdentifierTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 328, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(186, 186, 186)
@@ -207,7 +209,7 @@ public class FirstRegisterFrm extends javax.swing.JFrame {
                 .addGap(32, 32, 32)
                 .addComponent(countryCb, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(32, 32, 32)
-                .addComponent(curpTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(countryIdentifierTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(continueBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(51, Short.MAX_VALUE))
@@ -284,44 +286,97 @@ public class FirstRegisterFrm extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_fisrtNameTxtKeyTyped
 
-    private void curpTxtFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_curpTxtFocusGained
+    private void countryIdentifierTxtFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_countryIdentifierTxtFocusGained
         // TODO add your handling code here:
-        if (this.curpTxt.getText().contentEquals("CURP/ID")) {
-            curpTxt.setText("");
+        if (this.countryIdentifierTxt.getText().contentEquals("CURP/ID")) {
+            countryIdentifierTxt.setText("");
 
         }
-    }//GEN-LAST:event_curpTxtFocusGained
+    }//GEN-LAST:event_countryIdentifierTxtFocusGained
 
-    private void curpTxtFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_curpTxtFocusLost
+    private void countryIdentifierTxtFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_countryIdentifierTxtFocusLost
         // TODO add your handling code here:
-        if (this.curpTxt.getText().contentEquals("")) {
-            curpTxt.setText("CURP/ID");
+        if (this.countryIdentifierTxt.getText().contentEquals("")) {
+            countryIdentifierTxt.setText("CURP/ID");
         }
-    }//GEN-LAST:event_curpTxtFocusLost
+    }//GEN-LAST:event_countryIdentifierTxtFocusLost
 
-    private void curpTxtMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_curpTxtMouseClicked
+    private void countryIdentifierTxtMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_countryIdentifierTxtMouseClicked
         // TODO add your handling code here:
-    }//GEN-LAST:event_curpTxtMouseClicked
+    }//GEN-LAST:event_countryIdentifierTxtMouseClicked
 
-    private void curpTxtMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_curpTxtMouseExited
+    private void countryIdentifierTxtMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_countryIdentifierTxtMouseExited
         // TODO add your handling code here:
-    }//GEN-LAST:event_curpTxtMouseExited
+    }//GEN-LAST:event_countryIdentifierTxtMouseExited
 
-    private void curpTxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_curpTxtActionPerformed
+    private void countryIdentifierTxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_countryIdentifierTxtActionPerformed
         // TODO add your handling code here:
 
 
-    }//GEN-LAST:event_curpTxtActionPerformed
+    }//GEN-LAST:event_countryIdentifierTxtActionPerformed
 
-    private void curpTxtKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_curpTxtKeyTyped
+    private void countryIdentifierTxtKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_countryIdentifierTxtKeyTyped
         // TODO add your handling code here:
-    }//GEN-LAST:event_curpTxtKeyTyped
+    }//GEN-LAST:event_countryIdentifierTxtKeyTyped
 
     private void continueBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_continueBtnActionPerformed
         // TODO add your handling code here:
-        new SecondRegisterFrm().setVisible(true);
-        this.dispose();
+
+        try {
+            RegisterNewUserDTO userDTO = createUserDTO(this.fisrtNameTxt.getText(),
+                    this.lastNameTxt.getText(),
+                    this.countryCb.getSelectedItem().toString(),
+                    this.countryIdentifierTxt.getText());
+
+            if (userDTO != null) {
+                new SecondRegisterFrm(userDTO).setVisible(true);
+                this.dispose();
+            }else{
+                JOptionPane.showMessageDialog(null, "There was an error in the validation process. Please check and retry");
+            }
+
+        } catch (Exception e) {
+                JOptionPane.showMessageDialog(null, "There was an error in the validation process. Please check and retry");
+
+        }
+
+
     }//GEN-LAST:event_continueBtnActionPerformed
+
+    private RegisterNewUserDTO createUserDTO(String firstName, String lastName, String country, String countryId) throws Exception {
+
+        if (validateFields()) {
+            RegisterNewUserDTO registerDTO = generateDTO();
+            registerDTO.setFirstName(firstName);
+            registerDTO.setLastName(lastName);
+            registerDTO.setCountry(country);
+            registerDTO.setCountryIdentifier(countryId);
+            return registerDTO;
+        } else {
+            return null;
+        }
+
+    }
+
+
+    private boolean validateFields() throws Exception {
+
+        if (this.fisrtNameTxt.getText().equalsIgnoreCase("First name")
+                | this.lastNameTxt.getText().equalsIgnoreCase("Last name")
+                | this.countryCb.getSelectedItem().toString().equalsIgnoreCase("Select your country")
+                | this.countryIdentifierTxt.getText().equalsIgnoreCase("CURP/ID")) {
+
+            throw new Exception("There was an error while veryfing the field values");
+        }
+
+        return true;
+    }
+
+    private RegisterNewUserDTO generateDTO() {
+
+        RegisterNewUserDTO newUserDto = new RegisterNewUserDTO();
+        return newUserDto;
+    }
 
     /**
      * @param args the command line arguments
@@ -361,7 +416,7 @@ public class FirstRegisterFrm extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton continueBtn;
     private javax.swing.JComboBox<String> countryCb;
-    private javax.swing.JTextField curpTxt;
+    private javax.swing.JTextField countryIdentifierTxt;
     private javax.swing.JTextField fisrtNameTxt;
     private javax.swing.JLabel imgBackground;
     private javax.swing.JPanel jPanel1;

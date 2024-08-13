@@ -4,6 +4,14 @@
  */
 package com.mycompany.bankui;
 
+import com.mycompany.bankdomain.Customer;
+import dtos.RegisterNewUserDTO;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.util.ArrayList;
+import java.util.Date;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author waw
@@ -13,9 +21,50 @@ public class ThirdRegisterFrm extends javax.swing.JFrame {
     /**
      * Creates new form FirstRegisterFrm
      */
+    private RegisterNewUserDTO registerDTO;
+    
+            
+            
     public ThirdRegisterFrm() {
         initComponents();
         setLocationRelativeTo(null);
+    }
+
+    public ThirdRegisterFrm(RegisterNewUserDTO registerDTO) {
+        this.registerDTO = registerDTO;
+        initComponents();
+        setLocationRelativeTo(null);
+
+    }
+
+    private RegisterNewUserDTO assignValues(String email, String password, String confirmPassword) throws Exception {
+
+        ArrayList<String> fields = new ArrayList<>();
+
+        if (validateFields()) {
+
+            registerDTO.setEmail(email);
+            registerDTO.setPassword(password);
+            registerDTO.setPasswordConfirmation(confirmPassword);
+
+            return registerDTO;
+        } else {
+            JOptionPane.showMessageDialog(null, "There is an error in a field, please retry");
+            return null;
+        }
+
+    }
+
+    private boolean validateFields() throws Exception {
+
+        if (this.emailTxt.getText().equalsIgnoreCase("Email")
+                | this.passwordTxt.getText().equalsIgnoreCase("Password")
+                | this.passwordConfirmTxt.getText().toString().equalsIgnoreCase("Confirm your password")) {
+
+            throw new Exception("There was an error while veryfing the field values");
+        }
+
+        return true;
     }
 
     /**
@@ -265,6 +314,29 @@ public class ThirdRegisterFrm extends javax.swing.JFrame {
 
     private void continueBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_continueBtnActionPerformed
         // TODO add your handling code here:
+
+        try {
+            assignValues(this.emailTxt.getText().toString(), this.passwordTxt.getText().toString(), this.passwordConfirmTxt.getText().toString());
+            
+            Customer customer = new Customer(this.registerDTO.getFirstName(),
+                    this.registerDTO.getLastName(), 
+                    new Date(), 
+                    this.registerDTO.getAddressLine1(),
+                    this.registerDTO.getCountryIdentifier(),
+                    this.registerDTO.getEmail(), 
+                    this.registerDTO.getPassword());
+            
+            System.out.println(customer.toString());
+            new MainFrm().setVisible(true);
+            this.dispose();
+            
+            
+        } catch (Exception e) {
+            System.out.println("An exception ocurred, please retry");
+            JOptionPane.showMessageDialog(null, "Please check your input and retry");
+        }
+
+
     }//GEN-LAST:event_continueBtnActionPerformed
 
     private void passwordConfirmTxtKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_passwordConfirmTxtKeyTyped
